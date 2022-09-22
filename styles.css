@@ -8,6 +8,7 @@
 
   --white: #FFFFFF;
   --grey: #F2F2F2;
+  --grey-dark: #666666; 
   --green: #68B738;
   --black: #000000;
 }
@@ -17,10 +18,16 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: var(--fontOswald);
   font-weight: 400;
 
   color: var(--black);
+}
+
+html, body {
+  height: 100%;
 }
 
 html, body, header, main, footer {
@@ -197,6 +204,9 @@ html, body, header, main, footer {
 }
 /* Фоновое изображение справа */
 
+.main {
+  flex-grow: 1 0;
+}
 
 /* Section lead */
 
@@ -448,3 +458,43 @@ html, body, header, main, footer {
 .packs-link:hover svg {
   transform: scaleX(1.25);
 }
+
+/* footer */
+.footer {
+  background-color: var(--grey);
+}
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 3.75rem 0;
+}
+
+.footer-social {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 1.75rem;
+}
+
+.footer-social svg {
+  fill: var(--grey-dark);
+
+  transition: fill 0.2s linear;
+}
+
+.footer-social svg:hover {
+  fill: var(--dark);
+}
+
+.footer__link--editor {
+  color: var(--grey-dark);
+
+  transition: color 0.2s linear;
+}
+
+.footer__link--editor:hover {
+  color: var(--dark);
+}
+
+/* /footer */
