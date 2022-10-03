@@ -6,6 +6,7 @@
   --fontOswald: 'Oswald', sans-serif;
   --fontRoboto: 'Roboto', sans-serif;
 
+  --background-color: #EAEAEA;
   --white: #FFFFFF;
   --grey: #F2F2F2;
   --grey-medium: #666666; 
@@ -39,6 +40,33 @@ html, body, header, main, footer {
 .section {
   width: 100%;
   overflow: hidden;
+}
+
+.section__title {
+  margin-bottom: 2rem;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .section__title {
+  margin-bottom: 3.75rem;
+    font-size: 3.75rem;
+  }
+}
+
+.section__text {
+  font-family: var(--fontRoboto);
+  font-size: .875rem;
+  line-height: 1.3;
+
+  color: var(--grey-dark);
+}
+@media screen and (min-width: 768px) {
+  .section__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  }
 }
 
 .container {
@@ -347,26 +375,6 @@ html, body, header, main, footer {
   }
 }
 
-/* .lead-image {
-  z-index: -3;
-}
-
-@media screen and (min-width: 768px) {
-  .lead-image {
-    position: absolute;
-    top: 17rem;
-    left: 6rem;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .lead-image {
-    top: 1rem;
-    left: 29rem;
-  }
-} */
-
-
 /* Секция - программы похудения */
 
 .wrapper {
@@ -435,10 +443,6 @@ html, body, header, main, footer {
   margin-bottom: 1rem;
 
   border-bottom: 1px solid #D9D9D9;
-
-  font-family: var(--fontRoboto);
-  font-size: .875rem;
-  line-height: 1.3;
 }
 
 @media screen and (min-width: 1280px) {
@@ -446,8 +450,8 @@ html, body, header, main, footer {
     padding-bottom: .75rem;
     margin-bottom: .75rem;
 
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 1.2rem;
+    line-height: 1.5;
 
     border: 1px solid transparent;
   }
@@ -476,22 +480,6 @@ html, body, header, main, footer {
 /* advantages-list */
 .advantages {
   margin: 1rem 0;
-}
-
-.content {
-  width: 100%;
-}
-
-.advantages-title {
-  margin-bottom: 2rem;
-  font-size: 2.25rem;
-  line-height: 1;
-}
-
-@media screen and (min-width: 768px) {
-  .advantages-title {
-    font-size: 3.75rem;
-  }
 }
 
 .advantages-list {
@@ -542,7 +530,7 @@ html, body, header, main, footer {
     top: 3rem;
   
     font-size: 15rem;
-    line-height: 0.7;
+    line-height: 0.5;
     
     color: var(--grey);
     z-index: -1;
@@ -570,23 +558,129 @@ html, body, header, main, footer {
 .advantages-item__icon svg {
   fill: var(--white);
 }
-
-.advantages-item__text {
-  /* width: 90%; */
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--grey-dark);
-}
-
 /* /advantages-list */
 
-/* section example */
+/* section results ////////////////////////////////////////////////// */
+.results {
+  padding: 1.75rem 0;
+  background-color: var(--background-color);
+}
+@media screen and (min-width: 768px) {
+  .results {
+    background-color: var(--white);
+  }
+  .results::before {
+    content: '';
+    margin-bottom: 2.6rem;
 
-.example {
-  margin: 1rem 0;;
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-color: var(--grey-medium);
+  }
 }
 
-/* /section example */
+.block {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .block {
+    margin-top: 2.5rem;
+    margin-bottom: 3.75rem;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.results-total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .results-total {
+    width: 60%;
+  }
+}
+
+.results-total__after {
+  margin-bottom: 1.625rem;
+  position: relative;
+
+  width: 45%;
+  padding: 1rem 0;
+
+  text-align: center;
+  border: 1px solid var(--grey-medium);
+}
+@media screen and (min-width: 768px) {
+  .results-total__after {
+    margin-bottom: 0;
+  }
+}
+
+.results-total__title {
+  font-size: 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .results-total__title {
+    font-size: 1.875rem;
+    line-height: 1.3;
+  }
+}
+
+.results-total_small {
+  width: 20%;
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  font-size: .75rem;
+  line-height: 1;
+
+  background-color: var(--background-color);
+}
+@media screen and (min-width: 768px) {
+  .results-total_small {
+    width: 50%;
+    background-color: var(--white);
+  }
+}
+
+.results__cost {
+  margin-bottom: 1rem;
+
+  font-size: .875rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .results__cost {
+    margin-bottom: 0;
+    width: 25%;
+
+    font-size: 1.25rem;
+    line-height: 1;
+    text-align: right;
+  }
+}
+
+.results-slider__img {
+  display: block;
+  margin: 0 auto;
+}
+/* /section results */
 
 /* footer */
 .footer {
