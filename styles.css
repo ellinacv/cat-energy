@@ -583,7 +583,7 @@ html, body, header, main, footer {
     width: 100%;
     height: 1px;
 
-    background-color: var(--grey-medium);
+    background-color: #D9D9D9;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -626,12 +626,16 @@ html, body, header, main, footer {
 }
 
 .results-total {
+  margin-bottom: .3rem;
+
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
   .results-total {
+    margin-bottom: 0;
+
     width: 60%;
   }
 }
@@ -724,32 +728,92 @@ html, body, header, main, footer {
 }
 /* /section results */
 
-/* footer */
+/* footer //////////////////////////////////////////////////////////*/
 .footer {
+  position: relative;
   background-color: var(--grey);
 }
-.footer-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  padding: 3.75rem 0;
+.footer::before {
+  content: '';
+
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 37%;
+
+  background-color: #D9D9D9;
+}
+
+.footer::after {
+  content: '';
+
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 37%;
+
+  background-color: #D9D9D9;
+}
+@media screen and (min-width: 768px) {
+  .footer::after,
+  .footer::before {
+    display: none;
+  }
+}
+
+.footer-wrap {
+  padding: 2.5rem 0;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 2.25rem;
+  justify-items: center;
+  align-content: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 3.75rem 0;
+  }
 }
 
 .footer-social {
+  width: 60%;
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-gap: 1.75rem;
   align-items: center;
+  justify-items: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-social {
+    width: auto;
+  }
 }
 
 .footer-social__link svg > path {
-  stroke: var(--grey-medium);
-
-  transition: stroke 0.2s linear;
+  transition: fill .2s linear , stroke 0.2s linear;
 }
 
-.footer-social__link:hover svg > path {
+.link_fill svg > path {
+  fill: var(--grey-medium);
+}
+
+.link_fill:hover svg > path {
+  fill: var(--grey-dark);
+}
+
+.link_stroke svg > path {
+  stroke: var(--grey-medium);
+}
+
+.link_stroke:hover svg > path {
   stroke: var(--grey-dark);
 }
 
