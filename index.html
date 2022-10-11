@@ -24,7 +24,7 @@
     </div>
     
     <div class="header-bg">
-      <img class="header-bg__img" src="./img/bg-img_desktop.jpg" alt="Кот" />
+      <img class="header-bg__img" src="./img/bg-img_desktop.jpg" alt="Кот"/>
     </div>
   </header>
 
@@ -37,9 +37,11 @@
             <p class="lead__subtitle">Занялся собой? Займись котом!</p>
             <a class="button button_green lead__button" href="#">Подобрать программу</a>
           </div>
-          <div class="lead-image">
-            <img src="./img/bg-can_desktop.png" alt="Cat Energy с курицей">
-          </div>
+          <picture class="lead-image">
+            <source srcset="./img/bg-can_mobile@1x.png 1x, ./img/bg-can_mobile@2x.png 2x" media="(max-width: 767px)">
+            <source srcset="./img/bg-can_tablet@1x.png 1x, ./img/bg-can_tablet@2x.png 2x" media="(max-width: 1279px)">
+            <img src="./img/bg-can_desktop@1x.png" srcset="./img/bg-can_desktop@2x.png 2x" alt="Cat Energy с курицей">
+          </picture>
         </div>
       </div>
     </section>
@@ -49,7 +51,11 @@
         <div class="wrapper">
           <div class="packs-category">
             <div class="packs-title">
-              <img class="packs-title__img" src="./img/cat_back.png" alt="Кот">
+              <picture>
+                <source srcset="./img/pack-1_mobile@1x.png 1x, ./img/pack-1_mobile@2x.png 2x" media="(max-width: 767px)">
+                <!-- <source srcset="./img/pack-1_tablet@1x.png, ./img/pack-1_tablet@2x.png 2x" media="(max-width: 1279px)"> -->
+                <img class="packs-title__img" src="./img/pack-1_desktop@1x.png" srcset="./img/pack-1_desktop@2x.png 2x" alt="Кот">
+              </picture>
               <h2 class="packs-title__text">Похудение</h2>
             </div>
             <p class="section__text packs__descr">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
@@ -65,7 +71,11 @@
 
           <div class="packs-category">
             <div class="packs-title">
-              <img class="packs-title__img" src="./img/tiger_back.png" alt="Тигр">
+              <picture>
+                <source srcset="./img/pack-2_mobile@1x.png 1x, ./img/pack-2_mobile@2x.png 2x" media="(max-width: 767px)">
+                <!-- <source srcset="./img/pack-2_tablet@1x.png, ./img/pack-2_tablet@2x.png 2x" media="(max-width: 1279px)"> -->
+                <img class="packs-title__img" src="./img/pack-2_desktop@1x.png" srcset="./img/pack-2_desktop@2x.png 2x" alt="Тигр">
+              </picture>
               <h2 class="packs-title__text">Набор массы</h2>
             </div>
             <p class="section__text packs__descr">Заработать авторитет среди дворовых котов и даже собак?
@@ -200,7 +210,11 @@
             </div><!--/.block -->
           </div><!-- /.results-text -->
           <div class="results-slider">
-            <img class="results-slider__img" src="img/cat-after_mobile.png" alt="Результат диеты">
+            <picture>
+              <source srcset="./img/cat-after_mobile@1x.png 1x, ./img/cat-after_mobile@2x.png 2x" media="(max-width: 767px)">
+              <source srcset="./img/cat-after_tablet@1x.png, ./img/cat-after_tablet@2x.png 2x" media="(max-width: 1279px)">
+              <img class="results-slider__img" src="img/cat-after_desktop@1x.png 2x" srcset="img/cat-after_desktop@2x.png 2x" alt="Результат диеты">
+            </picture>
           </div><!-- /.results-slider -->
         </div><!-- /.content wrapper -->
       </div><!--/.container -->

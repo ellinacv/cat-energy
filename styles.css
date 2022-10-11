@@ -359,25 +359,31 @@ html, body, header, main, footer {
 }
 
 .lead__button:hover {
-  opacity: .90;
+  opacity: .9;
 }
 
 .lead-image {
   width: 100%;
+  margin-top: 1rem;
+  
+  display: flex;
+  justify-content: center;
   z-index: -2;
 }
 
 @media screen and (min-width: 768px) {
   .lead-image {
     position: absolute;
-    top: 18.5rem;
-    left: 6rem;
+    top: 11.25rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 @media screen and (min-width: 1280px) {
   .lead-image {
     position: static;
+    transform: translate(0);
   }
 }
 
@@ -431,6 +437,10 @@ html, body, header, main, footer {
 
     grid-gap: 3.875rem;
   }
+}
+
+.packs-title__img {
+  vertical-align: bottom;
 }
 
 .packs-title__text {
@@ -656,7 +666,7 @@ html, body, header, main, footer {
   position: relative;
 
   width: 45%;
-  padding: 1rem 0;
+  padding: 1.1rem 0;
 
   text-align: center;
   border: 1px solid var(--grey-medium);
@@ -680,7 +690,7 @@ html, body, header, main, footer {
 }
 
 .results-total_small {
-  width: 20%;
+  width: 32%;
 
   position: absolute;
   top: 100%;
@@ -694,9 +704,9 @@ html, body, header, main, footer {
 }
 @media screen and (min-width: 768px) {
   .results-total_small {
-    width: 50%;
+    width: 45%;
 
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     background-color: var(--white);
   }
@@ -711,7 +721,7 @@ html, body, header, main, footer {
   margin-bottom: 1rem;
 
   font-size: .875rem;
-  line-height: 1.5;
+  line-height: 1;
   text-transform: uppercase;
   text-align: center;
 }
@@ -721,7 +731,7 @@ html, body, header, main, footer {
     width: 25%;
 
     font-size: 1.25rem;
-    line-height: 1;
+    line-height: 1.5;
     text-align: right;
   }
 }
@@ -741,17 +751,19 @@ html, body, header, main, footer {
 /* section contacts //////////////////////////////////////////////////*/
 .contacts {
   position: relative;
+}
+.contacts__map {
   background: url(img/map-phone.jpg) no-repeat;
   background-size: cover;
 }
 @media screen and (min-width: 768px) {
-  .contacts {
+  .contacts__map {
     background: url(img/map-tablet.jpg) no-repeat;
     background-size: cover;
   }
 }
 @media screen and (min-width: 1280px) {
-  .contacts {
+  .contacts__map {
     background: url(img/map-desktop.jpg) no-repeat;
   }
 }
